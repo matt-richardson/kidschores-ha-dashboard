@@ -324,8 +324,13 @@ sections:
                           'icon_color': icon_color,
                           'badge_icon': badge_icon,
                           'badge_color': badge_color,
-                          'tap_action': {
-                            'action': 'toggle'
+                         'tap_action': {
+                              'action': 'call-service',
+                              'service': 'kidschores.claim_chore',
+                              'data': {
+                                  'chore_name': primary,
+                                  'kid_name': ns.Kid_name
+                              }
                           },
                           'hold_action': {
                             'action': 'more-info'
